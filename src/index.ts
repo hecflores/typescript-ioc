@@ -2,6 +2,7 @@
 
 const isBrowser = new Function('try {return this===window;}catch(e){return false;}');
 const isWebWorker = new Function('try {return self instanceof WorkerGlobalScope;}catch(e){return false;}');
+let __dirname = __dirname ?? path.resolve();
 
 let useES6 = false;
 if (!isBrowser() && !isWebWorker()) {
